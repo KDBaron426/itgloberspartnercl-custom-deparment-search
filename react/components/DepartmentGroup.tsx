@@ -1,5 +1,6 @@
 import React from 'react'
-import { useCssHandles } from 'vtex.css-handles'
+
+import styles from './styles.css'
 
 type Props = {
   departments: [Category]
@@ -13,9 +14,6 @@ type Category = {
 }
 
 const DepartmentGroup = ({ departments, handleSetSlug }: Props) => {
-  const CSS_HANDLES = ['department__select']
-  const handles = useCssHandles(CSS_HANDLES)
-
   const onHandleSetSlug = (event: any) => {
     handleSetSlug(`${event.target.value}/$\{term\}&map=ft`)
   }
@@ -32,7 +30,7 @@ const DepartmentGroup = ({ departments, handleSetSlug }: Props) => {
     <select
       onChange={onHandleSetSlug}
       defaultValue="value0"
-      className={handles.department__select}
+      className={styles.department__select}
     >
       <option disabled value="value0">
         Seleccione una opción
