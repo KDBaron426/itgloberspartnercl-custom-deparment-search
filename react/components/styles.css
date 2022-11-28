@@ -1,0 +1,28 @@
+.department__container {
+  display: flex;
+  justify-content: center;
+}
+
+.department__select {
+  margin: 0 0.7rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  background: #ffffff;
+  color: #DD0021;
+  border: 1px solid #DD0021;
+}
+
+.department__select:hover {
+  margin: 0 0.7rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  background: #DD0021;
+  color: white;
+  border: none;
+}
+
+@media (max-width: 1024px) {
+  .department__select {
+    width: 60%;
+  }
+}
